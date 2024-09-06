@@ -6,13 +6,14 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.tiantian.tianAIda.model.dto.post.PostQueryRequest;
 import com.tiantian.tianAIda.model.entity.Post;
 import com.tiantian.tianAIda.model.vo.PostVO;
+
 import javax.servlet.http.HttpServletRequest;
 
 /**
  * 帖子服务
  *
- * @author <a href="https://github.com/litiantian">tiantian</a>
- * @from <a href="https://tiantian.icu">编程导航知识星球</a>
+ * @author <a href="https://github.com/tiantian">tiantian</a>
+ * @from <a href="https://tiantian.icu">tiantian</a>
  */
 public interface PostService extends IService<Post> {
 
@@ -31,13 +32,6 @@ public interface PostService extends IService<Post> {
      * @return
      */
     QueryWrapper<Post> getQueryWrapper(PostQueryRequest postQueryRequest);
-
-    /**
-     * 从 ES 查询
-     *
-     * @param postQueryRequest
-     * @return
-     */
 
     /**
      * 获取帖子封装

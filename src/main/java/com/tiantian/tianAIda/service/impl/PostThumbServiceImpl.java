@@ -10,16 +10,17 @@ import com.tiantian.tianAIda.model.entity.PostThumb;
 import com.tiantian.tianAIda.model.entity.User;
 import com.tiantian.tianAIda.service.PostService;
 import com.tiantian.tianAIda.service.PostThumbService;
-import javax.annotation.Resource;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
+
 /**
  * 帖子点赞服务实现
  *
- * @author <a href="https://github.com/litiantian">tiantian</a>
- * @from <a href="https://tiantian.icu">编程导航知识星球</a>
+ * @author <a href="https://github.com/tiantian">tiantian</a>
+ * @from <a href="https://tiantian.icu">tiantian</a>
  */
 @Service
 public class PostThumbServiceImpl extends ServiceImpl<PostThumbMapper, PostThumb>

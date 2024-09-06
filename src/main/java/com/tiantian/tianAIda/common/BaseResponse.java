@@ -1,14 +1,15 @@
 package com.tiantian.tianAIda.common;
 
-import java.io.Serializable;
 import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * 通用返回类
  *
  * @param <T>
- * @author <a href="https://github.com/litiantian">tiantian</a>
- * @from <a href="https://tiantian.icu">编程导航知识星球</a>
+ * @author <a href="https://github.com/tiantian">tiantian</a>
+ * @from <a href="https://tiantian.icu">tiantian</a>
  */
 @Data
 public class BaseResponse<T> implements Serializable {
@@ -29,7 +30,7 @@ public class BaseResponse<T> implements Serializable {
         this(code, data, "");
     }
 
-    public BaseResponse(com.tiantian.tianAIda.common.ErrorCode errorCode) {
+    public BaseResponse(ErrorCode errorCode) {
         this(errorCode.getCode(), null, errorCode.getMessage());
     }
 }

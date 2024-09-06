@@ -2,17 +2,18 @@ package com.tiantian.tianAIda.model.vo;
 
 import cn.hutool.json.JSONUtil;
 import com.tiantian.tianAIda.model.entity.Post;
+import lombok.Data;
+import org.springframework.beans.BeanUtils;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
-import lombok.Data;
-import org.springframework.beans.BeanUtils;
 
 /**
  * 帖子视图
  *
- * @author <a href="https://github.com/litiantian">tiantian</a>
- * @from <a href="https://tiantian.icu">编程导航知识星球</a>
+ * @author <a href="https://github.com/tiantian">tiantian</a>
+ * @from <a href="https://tiantian.icu">tiantian</a>
  */
 @Data
 public class PostVO implements Serializable {

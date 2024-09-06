@@ -4,15 +4,16 @@ import com.qcloud.cos.COSClient;
 import com.qcloud.cos.model.PutObjectRequest;
 import com.qcloud.cos.model.PutObjectResult;
 import com.tiantian.tianAIda.config.CosClientConfig;
-import java.io.File;
-import javax.annotation.Resource;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.Resource;
+import java.io.File;
 
 /**
  * Cos 对象存储操作
  *
- * @author <a href="https://github.com/litiantian">tiantian</a>
- * @from <a href="https://tiantian.icu">编程导航知识星球</a>
+ * @author <a href="https://github.com/tiantian">tiantian</a>
+ * @from <a href="https://tiantian.icu">tiantian</a>
  */
 @Component
 public class CosManager {

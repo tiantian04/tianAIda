@@ -8,7 +8,12 @@ import com.tiantian.tianAIda.model.entity.Post;
 import com.tiantian.tianAIda.model.entity.PostFavour;
 import com.tiantian.tianAIda.model.entity.User;
 
-
+/**
+ * 帖子收藏服务
+ *
+ * @author <a href="https://github.com/tiantian">tiantian</a>
+ * @from <a href="https://tiantian.icu">tiantian</a>
+ */
 public interface PostFavourService extends IService<PostFavour> {
 
     /**

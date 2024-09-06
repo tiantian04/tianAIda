@@ -1,12 +1,14 @@
 package com.tiantian.tianAIda.service;
 
-import com.tiantian.tianAIda.model.entity.PostThumb;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.tiantian.tianAIda.model.entity.PostThumb;
 import com.tiantian.tianAIda.model.entity.User;
 
 /**
  * 帖子点赞服务
  *
+ * @author <a href="https://github.com/tiantian">tiantian</a>
+ * @from <a href="https://tiantian.icu">tiantian</a>
  */
 public interface PostThumbService extends IService<PostThumb> {
 

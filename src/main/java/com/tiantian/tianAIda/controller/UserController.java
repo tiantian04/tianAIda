@@ -9,38 +9,28 @@ import com.tiantian.tianAIda.common.ResultUtils;
 import com.tiantian.tianAIda.constant.UserConstant;
 import com.tiantian.tianAIda.exception.BusinessException;
 import com.tiantian.tianAIda.exception.ThrowUtils;
-import com.tiantian.tianAIda.model.dto.user.UserAddRequest;
-import com.tiantian.tianAIda.model.dto.user.UserLoginRequest;
-import com.tiantian.tianAIda.model.dto.user.UserQueryRequest;
-import com.tiantian.tianAIda.model.dto.user.UserRegisterRequest;
-import com.tiantian.tianAIda.model.dto.user.UserUpdateMyRequest;
-import com.tiantian.tianAIda.model.dto.user.UserUpdateRequest;
+import com.tiantian.tianAIda.model.dto.user.*;
 import com.tiantian.tianAIda.model.entity.User;
 import com.tiantian.tianAIda.model.vo.LoginUserVO;
 import com.tiantian.tianAIda.model.vo.UserVO;
 import com.tiantian.tianAIda.service.UserService;
-
-import java.util.List;
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.util.DigestUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 import static com.tiantian.tianAIda.service.impl.UserServiceImpl.SALT;
 
 /**
  * 用户接口
  *
- * @author <a href="https://github.com/litiantian">tiantian</a>
- * @from <a href="https://tiantian.icu">编程导航知识星球</a>
+ * @author <a href="https://github.com/tiantian">tiantian</a>
+ * @from <a href="https://tiantian.icu">tiantian</a>
  */
 @RestController
 @RequestMapping("/user")
@@ -49,7 +39,6 @@ public class UserController {
 
     @Resource
     private UserService userService;
-
 
     // region 登录相关
 
@@ -94,7 +83,6 @@ public class UserController {
         LoginUserVO loginUserVO = userService.userLogin(userAccount, userPassword, request);
         return ResultUtils.success(loginUserVO);
     }
-
 
     /**
      * 用户注销

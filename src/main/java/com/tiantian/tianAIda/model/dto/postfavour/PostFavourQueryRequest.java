@@ -2,15 +2,16 @@ package com.tiantian.tianAIda.model.dto.postfavour;
 
 import com.tiantian.tianAIda.common.PageRequest;
 import com.tiantian.tianAIda.model.dto.post.PostQueryRequest;
-import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
 
 /**
  * 帖子收藏查询请求
  *
- * @author <a href="https://github.com/litiantian">tiantian</a>
- * @from <a href="https://tiantian.icu">编程导航知识星球</a>
+ * @author <a href="https://github.com/tiantian">tiantian</a>
+ * @from <a href="https://tiantian.icu">tiantian</a>
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

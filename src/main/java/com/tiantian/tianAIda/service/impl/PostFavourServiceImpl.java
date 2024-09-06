@@ -13,16 +13,17 @@ import com.tiantian.tianAIda.model.entity.PostFavour;
 import com.tiantian.tianAIda.model.entity.User;
 import com.tiantian.tianAIda.service.PostFavourService;
 import com.tiantian.tianAIda.service.PostService;
-import javax.annotation.Resource;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
+
 /**
  * 帖子收藏服务实现
  *
- * @author <a href="https://github.com/litiantian">tiantian</a>
- * @from <a href="https://tiantian.icu">编程导航知识星球</a>
+ * @author <a href="https://github.com/tiantian">tiantian</a>
+ * @from <a href="https://tiantian.icu">tiantian</a>
  */
 @Service
 public class PostFavourServiceImpl extends ServiceImpl<PostFavourMapper, PostFavour>

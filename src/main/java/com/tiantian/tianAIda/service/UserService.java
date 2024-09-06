@@ -7,12 +7,14 @@ import com.tiantian.tianAIda.model.entity.User;
 import com.tiantian.tianAIda.model.vo.LoginUserVO;
 import com.tiantian.tianAIda.model.vo.UserVO;
 
-import java.util.List;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 用户服务
  *
+ * @author <a href="https://github.com/tiantian">tiantian</a>
+ * @from <a href="https://tiantian.icu">tiantian</a>
  */
 public interface UserService extends IService<User> {
 
@@ -36,13 +38,6 @@ public interface UserService extends IService<User> {
      */
     LoginUserVO userLogin(String userAccount, String userPassword, HttpServletRequest request);
 
-    /**
-     * 用户登录（微信开放平台）
-     *
-     * @param wxOAuth2UserInfo 从微信获取的用户信息
-     * @param request
-     * @return 脱敏后的用户信息
-     */
     /**
      * 获取当前登录用户
      *

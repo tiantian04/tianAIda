@@ -1,5 +1,6 @@
 package com.tiantian.tianAIda.service.impl;
 
+import cn.hutool.core.collection.CollUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -20,21 +21,25 @@ import com.tiantian.tianAIda.model.vo.UserVO;
 import com.tiantian.tianAIda.service.PostService;
 import com.tiantian.tianAIda.service.UserService;
 import com.tiantian.tianAIda.utils.SqlUtils;
-import java.util.ArrayList;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import lombok.extern.slf4j.Slf4j;
-import cn.hutool.core.collection.CollUtil;
-import org.apache.commons.lang3.ObjectUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.stereotype.Service;
 
-
+/**
+ * 帖子服务实现
+ *
+ * @author <a href="https://github.com/tiantian">tiantian</a>
+ * @from <a href="https://tiantian.icu">tiantian</a>
+ */
 @Service
 @Slf4j
 public class PostServiceImpl extends ServiceImpl<PostMapper, Post> implements PostService {
@@ -47,7 +52,6 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, Post> implements Po
 
     @Resource
     private PostFavourMapper postFavourMapper;
-
 
     @Override
     public void validPost(Post post, boolean add) {
@@ -109,7 +113,6 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, Post> implements Po
                 sortField);
         return queryWrapper;
     }
-
 
     @Override
     public PostVO getPostVO(Post post, HttpServletRequest request) {
